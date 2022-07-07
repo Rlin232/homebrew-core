@@ -21,5 +21,6 @@ class MitreSaf < Formula
   test do
     system bin/"saf", "--help"
     assert_match "@mitre/saf/#{version}", shell_output("#{bin}/saf --version")
+    assert_match "Visit https://saf.mitre.org/#/validate", shell_output("#{bin}/saf --convert")
   end
 end
